@@ -1,0 +1,4 @@
+./subsets/000000000036.jpg
+./subsets/000000000042.jpg
+./subsets/000000000049.jpg
+./subsets/000000000061.jpg
