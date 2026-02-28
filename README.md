@@ -1,5 +1,5 @@
 # ultralytics_export_rknn
-ultralytics export rknn
+ultralytics export rknn, support `YOLOv8`, `YOLO11` and `YOLO26`.
 
 ## Prepare
 Add [ultralytics rknn](https://github.com/wamshawn/ultralytics_rknn)
