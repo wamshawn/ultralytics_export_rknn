@@ -1,6 +1,7 @@
 import sys
 from typing import List, Any
 import click
+from pathlib import Path
 
 from .version import get_version
 from .onnx import OnnxExport
@@ -193,30 +194,37 @@ def export(
     do_quantization: bool,
     quantized_dataset: str,
 ):
-    onnx_export: OnnxExport | None = None
+    
     rknn_export: RKNNExport | None = None
     try:
 
-        onnx_export = OnnxExport(
-            runs_dir=runs_dir,
-            weights_dir=weights_dir,
-            datasets_dir=datasets_dir,
-            model=src,
-            task=task,
-        )
+        src_ext = Path(src).suffix
 
-        onnx_out = onnx_export.handle(
-            dst_dir=dst,
-            filename=name,
-            imgsz=imgsz,
-            half=half,
-            dynamic=dynamic,
-            simplify=simplify,
-            opset=opset,
-            nms=nms,
-            batch=batch,
-            device=parse_device_options(device),
-        )
+        if src_ext == ".pt":
+            onnx_export = OnnxExport(
+                runs_dir=runs_dir,
+                weights_dir=weights_dir,
+                datasets_dir=datasets_dir,
+                model=src,
+                task=task,
+            )
+            onnx_out = onnx_export.handle(
+                dst_dir=dst,
+                filename=name,
+                imgsz=imgsz,
+                half=half,
+                dynamic=dynamic,
+                simplify=simplify,
+                opset=opset,
+                nms=nms,
+                batch=batch,
+                device=parse_device_options(device),
+            )
+            src = f"{onnx_out}"
+        elif src_ext == ".onnx":
+            pass
+        else:
+            raise Exception("src is not supported")
 
         rknn_export = RKNNExport(
             target_platform=platform,  # 根据实际芯片选择
@@ -231,7 +239,7 @@ def export(
 
         rknn_export.handle(
             dst=dst,
-            src=onnx_out,
+            src=src,
             filename=name,
             do_quantization=do_quantization,
             quantized_dataset=quantized_dataset,
