@@ -167,6 +167,7 @@ def parse_device_options(devices: List[str]) -> List[int] | str | None:
 )
 @click.option("--do_quantization", is_flag=True, default=False)
 @click.option("--quantized_dataset", type=click.Path(exists=True, dir_okay=False))
+@click.option("--optimization_level", type=click.IntRange(0, 3), default=3)
 def export(
     ctx,
     dst: str,
@@ -193,8 +194,9 @@ def export(
     std_values: List[float] | None,
     do_quantization: bool,
     quantized_dataset: str,
+    optimization_level: int,
 ):
-    
+
     rknn_export: RKNNExport | None = None
     try:
 
@@ -234,6 +236,7 @@ def export(
             quant_img_RGB2BGR=quant_img_rgb2bgr,  # opencv 就不需要再反转通道
             mean_values=mean_values,  # yolo固定 0, 0, 0
             std_values=std_values,  # yolo固定 255, 255, 255
+            optimization_level=optimization_level,
             verbose=False,
         )
 

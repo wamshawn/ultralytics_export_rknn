@@ -15,6 +15,7 @@ class RKNNExport:
         quant_img_RGB2BGR: bool,
         mean_values: List[float] | None,
         std_values: List[float] | None,
+        optimization_level: int = 3,
         verbose: bool = False,
     ):
         try:
@@ -42,6 +43,7 @@ class RKNNExport:
                 quantized_dtype=quantized_dtype,  # 指定int8量化
                 quantized_algorithm=quantized_algorithm,  # 量化算法
                 quantized_method=quantized_method,  # 量化方法
+                optimization_level=optimization_level,
             )
         except Exception as e:
             if self.model is not None:
