@@ -54,7 +54,7 @@ class OnnxExport:
         dst_path: str | None
         try:
             out = self.model.export(
-                format="rknn_pure",
+                format="onnx",
                 imgsz=imgsz,
                 half=half,
                 dynamic=dynamic,
