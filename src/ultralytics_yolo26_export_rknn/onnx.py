@@ -50,11 +50,12 @@ class OnnxExport:
         nms: bool = False,
         batch: int = 1,
         device: str | List[int] | None = None,
+        load_external_data: bool = False
     ) -> str:
         dst_path: str | None
         try:
             out = self.model.export(
-                format="onnx",
+                format="onnx_rknn",
                 imgsz=imgsz,
                 half=half,
                 dynamic=dynamic,
@@ -64,6 +65,7 @@ class OnnxExport:
                 batch=batch,
                 device=device,
                 end2end=False,
+                load_external_data=load_external_data,
             )
             time.sleep(0.2)
             out_path = Path(out)

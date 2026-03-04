@@ -150,6 +150,7 @@ def parse_device_options(devices: List[str]) -> List[int] | str | None:
 @click.option("--nms", is_flag=True, default=False)
 @click.option("--batch", type=int, default=1)
 @click.option("--device", type=str, default=None, multiple=True)
+@click.option("--load_external_data", is_flag=True, default=False)
 @click.option("--platform", required=True, default=None)
 @click.option("--quantized_dtype", default="w8a8")
 @click.option("--quantized_algorithm", default="normal")
@@ -168,6 +169,7 @@ def parse_device_options(devices: List[str]) -> List[int] | str | None:
 @click.option("--do_quantization", is_flag=True, default=False)
 @click.option("--quantized_dataset", type=click.Path(exists=True, dir_okay=False))
 @click.option("--optimization_level", type=click.IntRange(0, 3), default=3)
+@click.option("--rknn_batch_size", type=int, default=None)
 def export(
     ctx,
     dst: str,
@@ -185,6 +187,7 @@ def export(
     nms: bool,
     batch: int,
     device: str | None,
+    load_external_data: bool,
     platform: str | None,
     quantized_dtype: str,
     quantized_algorithm: str,
@@ -195,6 +198,7 @@ def export(
     do_quantization: bool,
     quantized_dataset: str,
     optimization_level: int,
+    rknn_batch_size: int | None,
 ):
 
     rknn_export: RKNNExport | None = None
@@ -221,6 +225,7 @@ def export(
                 nms=nms,
                 batch=batch,
                 device=parse_device_options(device),
+                load_external_data=load_external_data,
             )
             src = f"{onnx_out}"
         elif src_ext == ".onnx":
@@ -246,6 +251,7 @@ def export(
             filename=name,
             do_quantization=do_quantization,
             quantized_dataset=quantized_dataset,
+            rknn_batch_size=rknn_batch_size,
         )
 
     except Exception as e:

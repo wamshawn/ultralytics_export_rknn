@@ -58,6 +58,7 @@ class RKNNExport:
         filename: str,
         do_quantization: bool,
         quantized_dataset: str,
+        rknn_batch_size: int | None,
     ) -> str:
         dst_out: str | None
         try:
@@ -74,7 +75,7 @@ class RKNNExport:
                 do_quantization = True
                 dataset = quantized_dataset
 
-            ret = self.model.build(do_quantization=do_quantization, dataset=dataset)  # 使用 验证 集
+            ret = self.model.build(do_quantization=do_quantization, dataset=dataset, rknn_batch_size=rknn_batch_size)  # 使用 验证 集
             if ret != 0:
                 raise Exception("RKNN build model failed!")
 
