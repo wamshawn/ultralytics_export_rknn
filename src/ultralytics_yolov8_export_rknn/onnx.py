@@ -54,7 +54,7 @@ class OnnxExport:
         dst_path: str | None
         try:
             out = self.model.export(
-                format="rknn_pure",
+                format="onnx_rknn",
                 imgsz=imgsz,
                 half=half,
                 dynamic=dynamic,
@@ -63,7 +63,6 @@ class OnnxExport:
                 nms=nms,
                 batch=batch,
                 device=device,
-                end2end=False,
             )
             time.sleep(0.2)
             out_path = Path(out)

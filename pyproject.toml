@@ -1,21 +1,21 @@
 [project]
-name = "ultralytics-export-rknn"
+name = "ultralytics-yolov8-export-rknn"
 version = "0.1.0"
 description = "ultralytics export rknn, support YOLOv8, YOLO11 and YOLO26."
 readme = "README.md"
 requires-python = "==3.12.3"
 dependencies = [
-    "rknn-toolkit2",
-    "ultralytics",
+    "rknn-toolkit2==2.3.2",
+    "ultralytics==8.2.82+rknn",
     "setuptools==66.1.1",
     "click>=8.3.1",
-    "onnx==1.18.0",
-    "onnxruntime==1.18.0",
+    "onnx==1.16.1",
+    "onnxruntime==1.17.0",
     "onnxslim>=0.1.82",
 ]
 
 [project.scripts]
-ultralytics-export-rknn-cli = "ultralytics_export_rknn.cli:main"
+ultralytics-yolov8-export-rknn-cli = "ultralytics_yolov8_export_rknn.cli:main"
 
 
 [build-system]
@@ -23,5 +23,5 @@ requires = ["uv_build>=0.7.4,<0.8.0"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
-ultralytics = { path = "../ultralytics_rknn" }
+ultralytics = { path = "wheels/ultralytics-8.2.82+rknn-py3-none-any.whl" }
 rknn-toolkit2 = { path = "wheels/rknn_toolkit2-2.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl" }
