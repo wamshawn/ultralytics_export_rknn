@@ -150,6 +150,7 @@ def parse_device_options(devices: List[str]) -> List[int] | str | None:
 @click.option("--nms", is_flag=True, default=False)
 @click.option("--batch", type=int, default=1)
 @click.option("--device", type=str, default=None, multiple=True)
+@click.option("--load_external_data", is_flag=True, default=False)
 @click.option("--platform", required=True, default=None)
 @click.option("--quantized_dtype", default="w8a8")
 @click.option("--quantized_algorithm", default="normal")
@@ -185,6 +186,7 @@ def export(
     nms: bool,
     batch: int,
     device: str | None,
+    load_external_data: bool,
     platform: str | None,
     quantized_dtype: str,
     quantized_algorithm: str,
@@ -221,6 +223,7 @@ def export(
                 nms=nms,
                 batch=batch,
                 device=parse_device_options(device),
+                load_external_data=load_external_data,
             )
             src = f"{onnx_out}"
         elif src_ext == ".onnx":

@@ -527,6 +527,27 @@ wheels = [
 ]
 
 [[package]]
+name = "pandas"
+version = "3.0.1"
+source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
+dependencies = [
+    { name = "numpy" },
+    { name = "python-dateutil" },
+    { name = "tzdata", marker = "sys_platform == 'emscripten' or sys_platform == 'win32'" },
+]
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/2e/0c/b28ed414f080ee0ad153f848586d61d1878f91689950f037f976ce15f6c8/pandas-3.0.1.tar.gz", hash = "sha256:4186a699674af418f655dbd420ed87f50d56b4cd6603784279d9eef6627823c8", size = 4641901, upload-time = "2026-02-17T22:20:16.434Z" }
+wheels = [
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/37/51/b467209c08dae2c624873d7491ea47d2b47336e5403309d433ea79c38571/pandas-3.0.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:476f84f8c20c9f5bc47252b66b4bb25e1a9fc2fa98cead96744d8116cb85771d", size = 10344357, upload-time = "2026-02-17T22:18:38.262Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/7c/f1/e2567ffc8951ab371db2e40b2fe068e36b81d8cf3260f06ae508700e5504/pandas-3.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:0ab749dfba921edf641d4036c4c21c0b3ea70fea478165cb98a998fb2a261955", size = 9884543, upload-time = "2026-02-17T22:18:41.476Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/d7/39/327802e0b6d693182403c144edacbc27eb82907b57062f23ef5a4c4a5ea7/pandas-3.0.1-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:b8e36891080b87823aff3640c78649b91b8ff6eea3c0d70aeabd72ea43ab069b", size = 10396030, upload-time = "2026-02-17T22:18:43.822Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/3d/fe/89d77e424365280b79d99b3e1e7d606f5165af2f2ecfaf0c6d24c799d607/pandas-3.0.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:532527a701281b9dd371e2f582ed9094f4c12dd9ffb82c0c54ee28d8ac9520c4", size = 10876435, upload-time = "2026-02-17T22:18:45.954Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/b5/a6/2a75320849dd154a793f69c951db759aedb8d1dd3939eeacda9bdcfa1629/pandas-3.0.1-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:356e5c055ed9b0da1580d465657bc7d00635af4fd47f30afb23025352ba764d1", size = 11405133, upload-time = "2026-02-17T22:18:48.533Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/58/53/1d68fafb2e02d7881df66aa53be4cd748d25cbe311f3b3c85c93ea5d30ca/pandas-3.0.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:9d810036895f9ad6345b8f2a338dd6998a74e8483847403582cab67745bff821", size = 11932065, upload-time = "2026-02-17T22:18:50.837Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/75/08/67cc404b3a966b6df27b38370ddd96b3b023030b572283d035181854aac5/pandas-3.0.1-cp312-cp312-win_amd64.whl", hash = "sha256:536232a5fe26dd989bd633e7a0c450705fdc86a207fec7254a55e9a22950fe43", size = 9741627, upload-time = "2026-02-17T22:18:53.905Z" },
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/86/4f/caf9952948fb00d23795f09b893d11f1cacb384e666854d87249530f7cbe/pandas-3.0.1-cp312-cp312-win_arm64.whl", hash = "sha256:0f463ebfd8de7f326d38037c7363c6dacb857c5881ab8961fb387804d6daf2f7", size = 9052483, upload-time = "2026-02-17T22:18:57.31Z" },
+]
+
+[[package]]
 name = "pillow"
 version = "12.1.1"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
@@ -543,34 +564,6 @@ wheels = [
     { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/1f/e7/7c4552d80052337eb28653b617eafdef39adfb137c49dd7e831b8dc13bc5/pillow-12.1.1-cp312-cp312-win32.whl", hash = "sha256:5d1f9575a12bed9e9eedd9a4972834b08c97a352bd17955ccdebfeca5913fa0a", size = 6328823, upload-time = "2026-02-11T04:21:01.385Z" },
     { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/3d/17/688626d192d7261bbbf98846fc98995726bddc2c945344b65bec3a29d731/pillow-12.1.1-cp312-cp312-win_amd64.whl", hash = "sha256:21329ec8c96c6e979cd0dfd29406c40c1d52521a90544463057d2aaa937d66a6", size = 7033367, upload-time = "2026-02-11T04:21:03.536Z" },
     { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/ed/fe/a0ef1f73f939b0eca03ee2c108d0043a87468664770612602c63266a43c4/pillow-12.1.1-cp312-cp312-win_arm64.whl", hash = "sha256:af9a332e572978f0218686636610555ae3defd1633597be015ed50289a03c523", size = 2453811, upload-time = "2026-02-11T04:21:05.116Z" },
-]
-
-[[package]]
-name = "polars"
-version = "1.38.1"
-source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
-dependencies = [
-    { name = "polars-runtime-32" },
-]
-sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/c6/5e/208a24471a433bcd0e9a6889ac49025fd4daad2815c8220c5bd2576e5f1b/polars-1.38.1.tar.gz", hash = "sha256:803a2be5344ef880ad625addfb8f641995cfd777413b08a10de0897345778239", size = 717667, upload-time = "2026-02-06T18:13:23.013Z" }
-wheels = [
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/0a/49/737c1a6273c585719858261753da0b688454d1b634438ccba8a9c4eb5aab/polars-1.38.1-py3-none-any.whl", hash = "sha256:a29479c48fed4984d88b656486d221f638cba45d3e961631a50ee5fdde38cb2c", size = 810368, upload-time = "2026-02-06T18:11:55.819Z" },
-]
-
-[[package]]
-name = "polars-runtime-32"
-version = "1.38.1"
-source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
-sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/07/4b/04d6b3fb7cf336fbe12fbc4b43f36d1783e11bb0f2b1e3980ec44878df06/polars_runtime_32-1.38.1.tar.gz", hash = "sha256:04f20ed1f5c58771f34296a27029dc755a9e4b1390caeaef8f317e06fdfce2ec", size = 2812631, upload-time = "2026-02-06T18:13:25.206Z" }
-wheels = [
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/ae/a2/a00defbddadd8cf1042f52380dcba6b6592b03bac8e3b34c436b62d12d3b/polars_runtime_32-1.38.1-cp310-abi3-macosx_10_12_x86_64.whl", hash = "sha256:18154e96044724a0ac38ce155cf63aa03c02dd70500efbbf1a61b08cadd269ef", size = 44108001, upload-time = "2026-02-06T18:11:58.127Z" },
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/a7/fb/599ff3709e6a303024efd7edfd08cf8de55c6ac39527d8f41cbc4399385f/polars_runtime_32-1.38.1-cp310-abi3-macosx_11_0_arm64.whl", hash = "sha256:c49acac34cc4049ed188f1eb67d6ff3971a39b4af7f7b734b367119970f313ac", size = 40230140, upload-time = "2026-02-06T18:12:01.181Z" },
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/dc/8c/3ac18d6f89dc05fe2c7c0ee1dc5b81f77a5c85ad59898232c2500fe2ebbf/polars_runtime_32-1.38.1-cp310-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:fef2ef2626a954e010e006cc8e4de467ecf32d08008f130cea1c78911f545323", size = 41994039, upload-time = "2026-02-06T18:12:04.332Z" },
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/f2/5a/61d60ec5cc0ab37cbd5a699edb2f9af2875b7fdfdfb2a4608ca3cc5f0448/polars_runtime_32-1.38.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e8a5f7a8125e2d50e2e060296551c929aec09be23a9edcb2b12ca923f555a5ba", size = 45755804, upload-time = "2026-02-06T18:12:07.846Z" },
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/91/54/02cd4074c98c361ccd3fec3bcb0bd68dbc639c0550c42a4436b0ff0f3ccf/polars_runtime_32-1.38.1-cp310-abi3-musllinux_1_2_aarch64.whl", hash = "sha256:10d19cd9863e129273b18b7fcaab625b5c8143c2d22b3e549067b78efa32e4fa", size = 42159605, upload-time = "2026-02-06T18:12:10.919Z" },
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/8e/f3/b2a5e720cc56eaa38b4518e63aa577b4bbd60e8b05a00fe43ca051be5879/polars_runtime_32-1.38.1-cp310-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:61e8d73c614b46a00d2f853625a7569a2e4a0999333e876354ac81d1bf1bb5e2", size = 45336615, upload-time = "2026-02-06T18:12:14.074Z" },
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/f1/8d/ee2e4b7de948090cfb3df37d401c521233daf97bfc54ddec5d61d1d31618/polars_runtime_32-1.38.1-cp310-abi3-win_amd64.whl", hash = "sha256:08c2b3b93509c1141ac97891294ff5c5b0c548a373f583eaaea873a4bf506437", size = 45680732, upload-time = "2026-02-06T18:12:19.097Z" },
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/bf/18/72c216f4ab0c82b907009668f79183ae029116ff0dd245d56ef58aac48e7/polars_runtime_32-1.38.1-cp310-abi3-win_arm64.whl", hash = "sha256:6d07d0cc832bfe4fb54b6e04218c2c27afcfa6b9498f9f6bbf262a00d58cc7c4", size = 41639413, upload-time = "2026-02-06T18:12:22.044Z" },
 ]
 
 [[package]]
@@ -601,6 +594,15 @@ wheels = [
     { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/04/78/0acd37ca84ce3ddffaa92ef0f571e073faa6d8ff1f0559ab1272188ea2be/psutil-7.2.2-cp36-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:b58fabe35e80b264a4e3bb23e6b96f9e45a3df7fb7eed419ac0e5947c61e47cc", size = 148266, upload-time = "2026-01-28T18:15:31.597Z" },
     { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/b4/90/e2159492b5426be0c1fef7acba807a03511f97c5f86b3caeda6ad92351a7/psutil-7.2.2-cp37-abi3-win_amd64.whl", hash = "sha256:eb7e81434c8d223ec4a219b5fc1c47d0417b12be7ea866e24fb5ad6e84b3d988", size = 137737, upload-time = "2026-01-28T18:15:33.849Z" },
     { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/8c/c7/7bb2e321574b10df20cbde462a94e2b71d05f9bbda251ef27d104668306a/psutil-7.2.2-cp37-abi3-win_arm64.whl", hash = "sha256:8c233660f575a5a89e6d4cb65d9f938126312bca76d8fe087b947b3a1aaac9ee", size = 134617, upload-time = "2026-01-28T18:15:36.514Z" },
+]
+
+[[package]]
+name = "py-cpuinfo"
+version = "9.0.0"
+source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/37/a8/d832f7293ebb21690860d2e01d8115e5ff6f2ae8bbdc953f0eb0fa4bd2c7/py-cpuinfo-9.0.0.tar.gz", hash = "sha256:3cdbbf3fac90dc6f118bfd64384f309edeadd902d7c8fb17f02ffa1fc3f49690", size = 104716, upload-time = "2022-10-25T20:38:06.303Z" }
+wheels = [
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/e0/a9/023730ba63db1e494a271cb018dcd361bd2c917ba7004c3e49d5daf795a2/py_cpuinfo-9.0.0-py3-none-any.whl", hash = "sha256:859625bc251f64e21f077d099d4162689c762b5d6a4c3c97553d56241c9674d5", size = 22335, upload-time = "2022-10-25T20:38:27.636Z" },
 ]
 
 [[package]]
@@ -733,6 +735,20 @@ wheels = [
 ]
 
 [[package]]
+name = "seaborn"
+version = "0.13.2"
+source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "pandas" },
+]
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/86/59/a451d7420a77ab0b98f7affa3a1d78a313d2f7281a57afb1a34bae8ab412/seaborn-0.13.2.tar.gz", hash = "sha256:93e60a40988f4d65e9f4885df477e2fdaff6b73a9ded434c1ab356dd57eefff7", size = 1457696, upload-time = "2024-01-25T13:21:52.551Z" }
+wheels = [
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl", hash = "sha256:636f8336facf092165e27924f223d3c62ca560b1f2bb5dff7ab7fad265361987", size = 294914, upload-time = "2024-01-25T13:21:49.598Z" },
+]
+
+[[package]]
 name = "setuptools"
 version = "66.1.1"
 source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
@@ -840,79 +856,107 @@ wheels = [
 ]
 
 [[package]]
+name = "tzdata"
+version = "2025.3"
+source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/5e/a7/c202b344c5ca7daf398f3b8a477eeb205cf3b6f32e7ec3a6bac0629ca975/tzdata-2025.3.tar.gz", hash = "sha256:de39c2ca5dc7b0344f2eba86f49d614019d29f060fc4ebc8a417896a620b56a7", size = 196772, upload-time = "2025-12-13T17:45:35.667Z" }
+wheels = [
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/c7/b0/003792df09decd6849a5e39c28b513c06e84436a54440380862b5aeff25d/tzdata-2025.3-py2.py3-none-any.whl", hash = "sha256:06a47e5700f3081aab02b2e513160914ff0694bce9947d6b76ebd6bf57cfc5d1", size = 348521, upload-time = "2025-12-13T17:45:33.889Z" },
+]
+
+[[package]]
 name = "ultralytics"
-source = { directory = "../ultralytics_rknn" }
+version = "8.3.9+rknn"
+source = { path = "wheels/ultralytics-8.3.9+rknn-py3-none-any.whl" }
 dependencies = [
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "opencv-python" },
+    { name = "pandas" },
     { name = "pillow" },
-    { name = "polars" },
     { name = "psutil" },
+    { name = "py-cpuinfo" },
     { name = "pyyaml" },
     { name = "requests" },
     { name = "scipy" },
+    { name = "seaborn" },
     { name = "torch" },
     { name = "torchvision" },
+    { name = "tqdm" },
     { name = "ultralytics-thop" },
+]
+wheels = [
+    { filename = "ultralytics-8.3.9+rknn-py3-none-any.whl", hash = "sha256:b040b510265b2f843495c8f8f63d12e2516857d63d2035b46bbb6d6fc8e29d64" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "albumentations", marker = "extra == 'extra'", specifier = ">=1.4.6" },
-    { name = "coremltools", marker = "python_full_version < '3.14' and sys_platform != 'win32' and extra == 'export'", specifier = ">=9.0" },
+    { name = "comet", marker = "extra == 'logging'" },
+    { name = "coremltools", marker = "python_full_version < '3.12' and sys_platform != 'win32' and extra == 'export'", specifier = ">=7.0" },
     { name = "coverage", extras = ["toml"], marker = "extra == 'dev'" },
-    { name = "faster-coco-eval", marker = "extra == 'extra'", specifier = ">=1.6.7" },
-    { name = "flask", marker = "extra == 'solutions'", specifier = ">=3.0.1" },
+    { name = "duckdb", marker = "extra == 'explorer'", specifier = "<=0.9.2" },
+    { name = "dvclive", marker = "extra == 'logging'", specifier = ">=2.12.0" },
+    { name = "flatbuffers", marker = "platform_machine == 'aarch64' and extra == 'export'", specifier = ">=23.5.26,<100" },
     { name = "h5py", marker = "platform_machine == 'aarch64' and extra == 'export'", specifier = "!=3.11.0" },
+    { name = "hub-sdk", marker = "extra == 'extra'", specifier = ">=0.0.12" },
     { name = "ipython", marker = "extra == 'dev'" },
     { name = "ipython", marker = "extra == 'extra'" },
+    { name = "keras", marker = "extra == 'export'" },
+    { name = "lancedb", marker = "extra == 'explorer'" },
     { name = "matplotlib", specifier = ">=3.3.0" },
-    { name = "minijinja", marker = "extra == 'dev'", specifier = ">=2.0.0" },
-    { name = "mkdocs-ultralytics-plugin", marker = "extra == 'dev'", specifier = ">=0.2.4" },
-    { name = "mlflow", marker = "extra == 'logging'" },
+    { name = "mkdocs", marker = "extra == 'dev'", specifier = ">=1.6.0" },
+    { name = "mkdocs-jupyter", marker = "extra == 'dev'" },
+    { name = "mkdocs-macros-plugin", marker = "extra == 'dev'", specifier = ">=1.0.5" },
+    { name = "mkdocs-material", marker = "extra == 'dev'", specifier = ">=9.5.9" },
+    { name = "mkdocs-redirects", marker = "extra == 'dev'" },
+    { name = "mkdocs-ultralytics-plugin", marker = "extra == 'dev'", specifier = ">=0.1.8" },
+    { name = "mkdocstrings", extras = ["python"], marker = "extra == 'dev'" },
     { name = "numpy", specifier = ">=1.23.0" },
-    { name = "numpy", marker = "extra == 'export'", specifier = "<2.0.0" },
-    { name = "onnx", marker = "sys_platform == 'darwin' and extra == 'export'", specifier = ">=1.12.0,<1.18.0" },
-    { name = "onnx", marker = "sys_platform != 'darwin' and extra == 'export'", specifier = ">=1.12.0" },
-    { name = "onnxslim", marker = "extra == 'export'", specifier = ">=0.1.82" },
+    { name = "numpy", marker = "platform_machine == 'aarch64' and extra == 'export'", specifier = "==1.23.5" },
+    { name = "onnx", marker = "extra == 'export'", specifier = ">=1.12.0" },
     { name = "opencv-python", specifier = ">=4.6.0" },
     { name = "openvino", marker = "extra == 'export'", specifier = ">=2024.0.0" },
-    { name = "packaging", marker = "python_full_version >= '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'export'", specifier = ">=26.0" },
+    { name = "pandas", specifier = ">=1.1.4" },
     { name = "pillow", specifier = ">=7.1.2" },
-    { name = "polars", specifier = ">=0.20.0" },
-    { name = "psutil", specifier = ">=5.8.0" },
+    { name = "psutil" },
+    { name = "py-cpuinfo" },
+    { name = "pycocotools", marker = "extra == 'extra'", specifier = ">=2.0.7" },
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "pytest-cov", marker = "extra == 'dev'" },
     { name = "pyyaml", specifier = ">=5.3.1" },
     { name = "requests", specifier = ">=2.23.0" },
-    { name = "scikit-learn", marker = "python_full_version < '3.14' and sys_platform != 'win32' and extra == 'export'", specifier = ">=1.3.2" },
+    { name = "scikit-learn", marker = "python_full_version < '3.12' and sys_platform != 'win32' and extra == 'export'", specifier = ">=1.3.2" },
     { name = "scipy", specifier = ">=1.4.1" },
-    { name = "scipy-stubs", marker = "python_full_version >= '3.10' and extra == 'typing'", specifier = ">=1.14.1.4" },
-    { name = "setuptools", marker = "extra == 'export'", specifier = "<=81.0.0" },
-    { name = "shapely", marker = "extra == 'solutions'", specifier = ">=2.0.0" },
-    { name = "streamlit", marker = "python_full_version >= '3.10' and extra == 'solutions'", specifier = ">=1.51.0" },
-    { name = "streamlit", marker = "(python_full_version < '3.9' and platform_machine == 'aarch64' and sys_platform == 'linux' and extra == 'solutions') or (python_full_version < '3.10' and platform_machine != 'aarch64' and extra == 'solutions') or (python_full_version < '3.10' and sys_platform != 'linux' and extra == 'solutions')", specifier = ">=1.29.0,<1.51.0" },
-    { name = "tensorboard", marker = "extra == 'logging'" },
-    { name = "tensorflow", marker = "extra == 'export'", specifier = ">=2.0.0,<=2.19.0" },
-    { name = "tensorflowjs", marker = "extra == 'export'", specifier = ">=2.0.0" },
+    { name = "seaborn", specifier = ">=0.11.0" },
+    { name = "streamlit", marker = "extra == 'explorer'" },
+    { name = "tensorboard", marker = "extra == 'logging'", specifier = ">=2.13.0" },
+    { name = "tensorflow", marker = "extra == 'export'", specifier = ">=2.0.0" },
+    { name = "tensorflowjs", marker = "extra == 'export'", specifier = ">=3.9.0" },
     { name = "tensorstore", marker = "python_full_version >= '3.9' and platform_machine == 'aarch64' and extra == 'export'", specifier = ">=0.1.63" },
     { name = "torch", specifier = ">=1.8.0" },
     { name = "torch", marker = "sys_platform == 'win32'", specifier = ">=1.8.0,!=2.4.0" },
     { name = "torchvision", specifier = ">=0.9.0" },
-    { name = "types-pillow", marker = "extra == 'typing'" },
-    { name = "types-psutil", marker = "extra == 'typing'" },
-    { name = "types-pyyaml", marker = "extra == 'typing'" },
-    { name = "types-requests", marker = "extra == 'typing'" },
-    { name = "types-shapely", marker = "extra == 'typing'" },
-    { name = "ultralytics-thop", specifier = ">=2.0.18" },
-    { name = "wandb", marker = "extra == 'logging'" },
-    { name = "zensical", marker = "python_full_version >= '3.10' and extra == 'dev'", specifier = ">=0.0.15" },
+    { name = "tqdm", specifier = ">=4.64.0" },
+    { name = "ultralytics-thop", specifier = ">=2.0.0" },
 ]
-provides-extras = ["dev", "export", "solutions", "logging", "extra", "typing"]
+provides-extras = ["dev", "export", "explorer", "logging", "extra"]
 
 [[package]]
-name = "ultralytics-export-rknn"
+name = "ultralytics-thop"
+version = "2.0.18"
+source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
+dependencies = [
+    { name = "numpy" },
+    { name = "torch" },
+]
+sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/1f/63/21a32e1facfeee245dbdfb7b4669faf7a36ff7c00b50987932bdab126f4b/ultralytics_thop-2.0.18.tar.gz", hash = "sha256:21103bcd39cc9928477dc3d9374561749b66a1781b35f46256c8d8c4ac01d9cf", size = 34557, upload-time = "2025-10-29T16:58:13.526Z" }
+wheels = [
+    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/7f/c7/fb42228bb05473d248c110218ffb8b1ad2f76728ed8699856e5af21112ad/ultralytics_thop-2.0.18-py3-none-any.whl", hash = "sha256:2bb44851ad224b116c3995b02dd5e474a5ccf00acf237fe0edb9e1506ede04ec", size = 28941, upload-time = "2025-10-29T16:58:12.093Z" },
+]
+
+[[package]]
+name = "ultralytics-yolo11-export-rknn"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
@@ -933,20 +977,7 @@ requires-dist = [
     { name = "onnxslim", specifier = ">=0.1.82" },
     { name = "rknn-toolkit2", path = "wheels/rknn_toolkit2-2.3.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl" },
     { name = "setuptools", specifier = "==66.1.1" },
-    { name = "ultralytics", directory = "../ultralytics_rknn" },
-]
-
-[[package]]
-name = "ultralytics-thop"
-version = "2.0.18"
-source = { registry = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/" }
-dependencies = [
-    { name = "numpy" },
-    { name = "torch" },
-]
-sdist = { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/1f/63/21a32e1facfeee245dbdfb7b4669faf7a36ff7c00b50987932bdab126f4b/ultralytics_thop-2.0.18.tar.gz", hash = "sha256:21103bcd39cc9928477dc3d9374561749b66a1781b35f46256c8d8c4ac01d9cf", size = 34557, upload-time = "2025-10-29T16:58:13.526Z" }
-wheels = [
-    { url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/packages/7f/c7/fb42228bb05473d248c110218ffb8b1ad2f76728ed8699856e5af21112ad/ultralytics_thop-2.0.18-py3-none-any.whl", hash = "sha256:2bb44851ad224b116c3995b02dd5e474a5ccf00acf237fe0edb9e1506ede04ec", size = 28941, upload-time = "2025-10-29T16:58:12.093Z" },
+    { name = "ultralytics", path = "wheels/ultralytics-8.3.9+rknn-py3-none-any.whl" },
 ]
 
 [[package]]
