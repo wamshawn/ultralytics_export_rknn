@@ -14,9 +14,9 @@ Add [rknn-toolkit2](https://github.com/airockchip/rknn-toolkit2/tree/master/rknn
 # download rknn_toolkit2-2.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl into ./wheels
 ```
 
-Add [ultralytics revision](https://github.com/wamshawn/ultralytics_revision/releases/tag/rknn-v8-v0.0.1)
+Add [ultralytics revision](https://github.com/wamshawn/ultralytics_revision/releases/tag/rknn-v8-v0.0.2)
 ```shell
-# download https://github.com/wamshawn/ultralytics_revision/releases/download/rknn-v8-v0.0.1/ultralytics-8.2.82+rknn-py3-none-any.whl into  ./wheels
+# download https://github.com/wamshawn/ultralytics_revision/releases/download/rknn-v8-v0.0.2/ultralytics-8.2.82+rknn-py3-none-any.whl into  ./wheels
 ```
 
 UV sync
