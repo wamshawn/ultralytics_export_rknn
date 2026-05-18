@@ -866,7 +866,7 @@ dependencies = [
     { name = "ultralytics-thop" },
 ]
 wheels = [
-    { filename = "ultralytics-8.2.82+rknn-py3-none-any.whl", hash = "sha256:47de224dc2e52840b81db6fd1519d26d284eb853fb77356867683edf46349a5c" },
+    { filename = "ultralytics-8.2.82+rknn-py3-none-any.whl", hash = "sha256:ab484758c514dd8f2453f1485f6d9b7359705df224c86ecb0cbf53410109310f" },
 ]
 
 [package.metadata]
